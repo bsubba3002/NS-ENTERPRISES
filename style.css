@@ -1,0 +1,261 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f4f6f8;
+  color: #333;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+}
+
+/* Hero Banner */
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('images/banner.jpg') no-repeat center center/cover;
+  color: white;
+  text-align: center;
+  padding: 120px 20px;
+  position: relative;
+}
+
+.hero h1 {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  text-shadow: 2px 2px 8px rgba(0,0,0,0.4);
+}
+
+.hero p {
+  font-size: 1.2rem;
+}
+
+.btn {
+  margin-top: 20px;
+  display: inline-block;
+  background: #007bff;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+.whatsapp {
+  background-color: #25D366;
+}
+
+.whatsapp:hover {
+  background-color: #128C7E;
+}
+
+/* Sections */
+section {
+  padding: 60px 20px;
+  max-width: 1200px;
+  margin: auto;
+  text-align: center;
+}
+
+h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #222;
+}
+
+p {
+  max-width: 800px;
+  margin: 10px auto;
+  font-size: 1rem;
+  color: #555;
+}
+
+/* Product Cards */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 25px;
+  margin-top: 40px;
+}
+
+.product-card {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 24px rgba(0,0,0,0.15);
+}
+
+.product-card h3 {
+  font-size: 1.1rem;
+  margin-bottom: 5px;
+  color: #007bff;
+}
+
+.product-card p {
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Contact Section */
+#contact iframe {
+  margin-top: 20px;
+  border-radius: 10px;
+}
+
+/* Footer */
+footer {
+  background: #222;
+  color: #ccc;
+  padding: 30px;
+  text-align: center;
+  font-size: 0.9rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .btn {
+    padding: 10px 20px;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  section {
+    padding: 40px 15px;
+  }
+}
+/* Root & Theme Variables */
+:root {
+  --primary-color: #ffa500;
+  --secondary-color: #ff69b4;
+  --background-light: #fff;
+  --background-dark: #333;
+  --text-light: #fff;
+  --text-dark: #000;
+}
+
+/* Reset and Base Styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  background-color: var(--background-light);
+  color: var(--text-dark);
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+body.dark-theme {
+  background-color: var(--background-dark);
+  color: var(--text-light);
+}
+
+h1, h2, h3 {
+  margin-bottom: 1rem;
+}
+
+/* Layout */
+.container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.logo {
+  display: block;
+  margin: 1rem auto;
+  width: 200px;
+  border-radius: 10px;
+}
+
+.highlight {
+  color: var(--primary-color);
+}
+
+/* Sections */
+.section {
+  margin: 2rem 0;
+  padding: 1.5rem;
+  border-left: 4px solid var(--primary-color);
+  background-color: #f9f9f9;
+  border-radius: 10px;
+}
+
+/* Cards */
+.product-card,
+.value-card {
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  padding: 1rem;
+  margin: 1rem 0;
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s;
+}
+
+.product-card:hover,
+.value-card:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Theme Toggle Button */
+.toggle-theme {
+  background-color: var(--secondary-color);
+  color: #fff;
+  border: none;
+  padding: 0.6rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  float: right;
+  margin-top: -3rem;
+}
+
+/* Image Styling */
+img {
+  max-width: 100%;
+  border-radius: 10px;
+}
+
+/* Scroll Animation */
+.fade-in {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: all 0.6s ease-in-out;
+}
+
+.fade-in.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .toggle-theme {
+    float: none;
+    display: block;
+    margin: 1rem auto;
+  }
+}
