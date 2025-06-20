@@ -4,16 +4,27 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>About Us | NS ENTERPRISES</title>
+
+  <!-- Font Awesome for social icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+
   <style>
-    /* Base Styles */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
       background-color: #fff3f5;
       color: #333;
-      margin: 0;
-      padding: 0;
       line-height: 1.6;
       transition: background 0.4s, color 0.4s;
+      margin: 0;
+      padding: 0;
     }
 
     a {
@@ -39,12 +50,52 @@
       padding-left: 0;
     }
 
+    /* Transparent Sticky Header */
+    header {
+      position: fixed;
+      width: 100%;
+      top: 0;
+      left: 0;
+      background: rgba(255, 182, 193, 0.1);
+      backdrop-filter: blur(8px);
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(255, 182, 193, 0.2);
+    }
+
+    header h1 {
+      color: #ff6f91;
+      font-size: 1.8rem;
+    }
+
+    nav a {
+      margin-left: 20px;
+      text-decoration: none;
+      color: #ff6f91;
+      font-weight: 500;
+      font-size: 1rem;
+      transition: color 0.3s;
+    }
+
+    nav a:hover {
+      color: #ff8c42;
+    }
+
+    main {
+      padding: 120px 20px 40px;
+      max-width: 1100px;
+      margin: auto;
+    }
+
     /* Hero Section */
     .hero {
       background: linear-gradient(rgba(255,107,53,0.7), rgba(255,214,224,0.8)), url('images/banner.jpg') center/cover no-repeat;
       color: #fff;
       text-align: center;
-      padding: 100px 20px;
+      padding: 120px 20px;
     }
 
     .hero h1 {
@@ -74,7 +125,7 @@
       background-color: #e4572e;
     }
 
-    /* Sections */
+    /* Section Styling */
     section {
       padding: 40px 20px;
       max-width: 1000px;
@@ -131,7 +182,7 @@
       color: #555;
     }
 
-    /* State Buttons */
+    /* States & Partners */
     .state-buttons {
       display: flex;
       flex-wrap: wrap;
@@ -147,17 +198,10 @@
       font-weight: 600;
       font-size: 1rem;
       color: white;
-      cursor: default;
       user-select: none;
       pointer-events: none;
-      transition: transform 0.15s ease-in-out;
     }
 
-    .pop-btn:hover {
-      transform: scale(1.1);
-    }
-
-    /* Partners */
     .partners-container {
       display: flex;
       flex-wrap: wrap;
@@ -176,10 +220,8 @@
       font-weight: 600;
       color: white;
       font-size: 1rem;
-      cursor: default;
       user-select: none;
       pointer-events: none;
-      transition: transform 0.15s ease-in-out;
     }
 
     .partner-btn img {
@@ -188,24 +230,42 @@
       border-radius: 5px;
     }
 
-    .partner-btn:hover {
-      transform: scale(1.1);
-    }
-
     /* Footer */
     footer {
-      background: #222;
+      background: rgba(34, 34, 34, 0.8);
+      backdrop-filter: blur(6px);
       color: #ccc;
       text-align: center;
-      padding: 20px;
+      padding: 25px 15px;
       font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffb6c1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ff8c42;
     }
 
     /* Responsive */
     @media (max-width: 600px) {
+      header {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav {
+        margin-top: 10px;
+      }
+
       .hero h1 {
         font-size: 2rem;
       }
+main {
+  padding: 120px 20px 40px;
+}
 
       .btn, .theme-btn {
         padding: 8px 16px;
@@ -213,14 +273,28 @@
     }
   </style>
 </head>
+
 <body>
 
-  <header class="hero" id="hero">
-    <h1>About NS ENTERPRISES</h1>
-    <p>Printing and Billing Solutions | Est. 2023</p>
-    <a href="index.html" class="btn">🏠 Back to Home</a><br><br>
-    <button class="theme-btn" onclick="toggleTheme()">Toggle Theme</button>
+   <header>
+    <div class="logo-title">
+      <img src="images/logo.png" alt="NS ENTERPRISES Logo" />
+      <h1>NS ENTERPRISES</h1>
+    </div>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="products.html">Products</a>
+      <a href="contact.html">Contact</a>
+    </nav>
   </header>
+
+  <br>
+   <br>
+    <br>
+     <br>
+      <br>
+    
 
  <section style="
   max-width: 700px;
@@ -241,7 +315,7 @@
     margin-bottom: 25px;
     font-weight: 700;
     letter-spacing: 1px;
-  ">1. Company Overview</h2>
+  "> Company Overview</h2>
 
   <p style="font-weight: 600; font-size: 1.1rem;">
     <strong>Name:</strong> <span style="color: #ff6f91;">NS ENTERPRISES</span>
@@ -298,7 +372,7 @@
     margin-bottom: 25px;
     font-weight: 700;
     letter-spacing: 1px;
-  ">2. Vision & Mission</h2>
+  ">Vision & Mission</h2>
 
   <h3 style="
     color: #ff6f91;
@@ -348,7 +422,7 @@
     margin-bottom: 40px;
     font-weight: 700;
     letter-spacing: 1px;
-  ">3. Core Values</h2>
+  ">Core Values</h2>
   
   <ul style="
     list-style: none;
@@ -402,10 +476,11 @@
 </style>
 
 
- 
 
-  <section style="background: #1a2238; padding: 30px 20px; border-radius: 12px; color: #fff; max-width: 900px; margin: auto;">
-  <h2 style="color: #ff8c42; text-align: center; margin-bottom: 20px;">5. Market & Clientele</h2>
+
+
+<section style="background: #fffaf6; padding: 30px 20px; border-radius: 12px; color: #333; max-width: 900px; margin: auto;">
+  <h2 style="color: #ff8c42; text-align: center; margin-bottom: 20px;"> Market & Clientele</h2>
   <p style="text-align: center; font-size: 1.1rem; margin-bottom: 25px;">We serve clients across major Indian states:</p>
 
   <div class="state-buttons" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 15px; margin-bottom: 40px;">
@@ -438,64 +513,9 @@
   </div>
 </section>
 
-<style>
-  .pop-btn {
-    background-color: #ff8c42; /* vibrant orange */
-    border: none;
-    border-radius: 25px;
-    color: white;
-    font-weight: 600;
-    padding: 12px 28px;
-    cursor: pointer;
-    font-size: 1rem;
-    box-shadow: 0 4px 8px rgba(255,140,66,0.4);
-    transition: transform 0.25s ease, box-shadow 0.25s ease;
-  }
-
-  .pop-btn:hover {
-    transform: scale(1.12);
-    box-shadow: 0 6px 15px rgba(255,140,66,0.7);
-  }
-
-  .partner-btn {
-    background: transparent;
-    border: 2px solid #ff8c42;
-    border-radius: 12px;
-    padding: 12px 15px;
-    width: 160px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    cursor: pointer;
-    color: white;
-    font-weight: 600;
-    font-size: 0.95rem;
-    box-shadow: 0 4px 8px rgba(255,140,66,0.3);
-    transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
-  }
-
-  .partner-btn img {
-    max-width: 90px;
-    max-height: 50px;
-    object-fit: contain;
-    margin-bottom: 10px;
-    filter: brightness(1) saturate(1);
-    transition: filter 0.3s ease;
-  }
-
-  .partner-btn:hover {
-    transform: scale(1.1);
-    border-color: #ffb07c;
-    box-shadow: 0 10px 25px rgba(255,140,66,0.8);
-  }
-
-  .partner-btn:hover img {
-    filter: brightness(1.2) saturate(1.2);
-  }
-</style>
 
   <section style="max-width: 700px; margin: 40px auto; padding: 20px; background: #f9f9f9; border-radius: 12px; box-shadow: 0 6px 15px rgba(0,0,0,0.1); font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
-  <h2 style="text-align: center; color: #ff8c42; margin-bottom: 25px; font-weight: 700; font-size: 2rem;">6. Company Highlights</h2>
+  <h2 style="text-align: center; color: #ff8c42; margin-bottom: 25px; font-weight: 700; font-size: 2rem;"> Company Highlights</h2>
   <ul style="list-style: none; padding: 0; margin: 0;">
     <li class="highlight-item">Operating since 2015 with consistent growth</li>
     <li class="highlight-item">Diverse product portfolio in thermal printing</li>
@@ -541,7 +561,7 @@
 
 
   <section style="max-width: 600px; margin: 40px auto; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; color: #333;">
-  <h2 style="text-align: center; color: #ff7a00; margin-bottom: 30px; font-weight: 700; letter-spacing: 1.2px;">7. Leadership Team</h2>
+  <h2 style="text-align: center; color: #ff7a00; margin-bottom: 30px; font-weight: 700; letter-spacing: 1.2px;">Leadership Team</h2>
 
   <div style="display: flex; flex-direction: column; align-items: center; gap: 20px;">
 
@@ -557,17 +577,41 @@
   </div>
 </section>
 
+<style>footer {
+  background: rgba(34, 34, 34, 0.8); /* transparent black */
+  backdrop-filter: blur(6px);
+  color: #ccc;
+  text-align: center;
+  padding: 25px 15px;
+  font-size: 0.9rem;
+}
 
-  <section id="contact">
-    <h2>8. Contact Information</h2>
-    <p>Address: Factory No. 43, SY No. 7/2, Kachohalli Village, Dasanapura Hobli, Bangalore – 560091</p>
-    <p>Email: <a href="mailto:nsenterprisesnagavenihh@gmail.com">nsenterprisesnagavenihh@gmail.com</a></p>
-    <p>Phone: <a href="tel:+919880408606">+91 98804 08606</a></p>
-  </section>
+footer a {
+  color: #ffb6c1;
+  text-decoration: none;
+}
 
-  <footer id="footer">
-    <p>© 2025 NS ENTERPRISES. All rights reserved.</p>
-  </footer>
+footer a:hover {
+  color: #ff8c42;
+}
+</style>
+ <footer>
+  <p>&copy; 2025 NS ENTERPRISES. All rights reserved.</p>
+  <p>📍 Factory No. 43, SY No. 7/2, Kachohalli Village, Dasanapura Hobli, Bangalore – 560091</p>
+  <p>📞 +91 98804 08606 | ✉️ <a href="mailto:nsenterprisesnagavenihh@gmail.com">nsenterprisesnagavenihh@gmail.com</a></p>
+  <div style="margin-top: 10px;">
+    <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;">
+      <i class="fab fa-facebook-f"></i>
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;">
+      <i class="fab fa-instagram"></i>
+    </a>
+    <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;">
+      <i class="fab fa-linkedin-in"></i>
+    </a>
+  </div>
+</footer>
+
 
   <!-- Script Section -->
   <script>
