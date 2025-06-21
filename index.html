@@ -4,22 +4,28 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>NS ENTERPRISES | Thermal Paper Solutions</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
   <style>
-    /* Reset & Basic Styling */
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
-      font-family: Arial, sans-serif;
+      font-family: 'Poppins', sans-serif;
     }
 
-    /* Transparent Header with baby pink background */
+    body {
+      background: #fff8fa;
+      color: #333;
+    }
+
+    /* Header */
     .transparent-header {
       position: fixed;
       width: 100%;
       top: 0;
       left: 0;
-      background: rgba(255, 182, 193, 0.15); /* baby pink with transparency */
+      background: rgba(255, 182, 193, 0.15);
       backdrop-filter: blur(10px);
       z-index: 1000;
       padding: 10px 0;
@@ -35,35 +41,85 @@
       align-items: center;
     }
 
-    /* Logo in orange */
     .logo {
       font-size: 1.5em;
       font-weight: bold;
-      color: #FF6F00; /* orange */
+      color: #FF6F00;
     }
 
     .nav-links a {
       text-decoration: none;
       margin-left: 20px;
-      color: #FF6F00; /* orange */
+      color: #FF6F00;
       font-weight: 500;
       transition: color 0.3s;
       font-size: 1.1em;
     }
 
     .nav-links a:hover {
-      color: #FF8F00; /* lighter orange */
+      color: #FF8F00;
+    }
+
+    /* Slideshow */
+    .slideshow-container {
+      position: relative;
+      max-width: 800px;
+      margin: 100px auto 60px;
+      overflow: hidden;
+      border-radius: 12px;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .slide {
+      display: none;
+      text-align: center;
+    }
+
+    .slide img {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .caption {
+      background: rgba(255, 111, 145, 0.85);
+      color: white;
+      font-size: 1.2rem;
+      padding: 10px 0;
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      font-weight: 600;
+    }
+
+    /* Footer */
+    footer {
+      background: rgba(34, 34, 34, 0.8);
+      backdrop-filter: blur(6px);
+      color: #ccc;
+      text-align: center;
+      padding: 25px 15px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ffb6c1;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      color: #ff8c42;
     }
   </style>
 </head>
 <body>
 
-  <!-- Transparent Navigation Header -->
+  <!-- Header -->
   <header class="transparent-header">
     <div class="nav-container">
       <h1 class="logo">NS ENTERPRISES</h1>
       <nav class="nav-links">
-        <a href="#">Home</a>
+        <a href="index.html">Home</a>
         <a href="products.html">Product</a>
         <a href="about.html">About Us</a>
         <a href="testimonials.html">Testimonials</a>
@@ -72,5 +128,448 @@
     </div>
   </header>
 
+  <!-- Slideshow Gallery -->
+  <div class="slideshow-container">
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Thermal Billing Rolls">
+      <div class="caption">Thermal Billing Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Bar Code Thermal Ribbons">
+      <div class="caption">Bar Code Thermal Ribbons</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Jumbo Rolls Supply">
+      <div class="caption">Jumbo Rolls Supply</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="ATM Thermal Rolls">
+      <div class="caption">ATM Thermal Paper Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="POS Rolls">
+      <div class="caption">POS Thermal Paper Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Cash Register Rolls">
+      <div class="caption">Cash Register Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Fax Rolls">
+      <div class="caption">Fax Thermal Paper Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Toll Rolls">
+      <div class="caption">Toll Plaza Thermal Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Bus Ticket Rolls">
+      <div class="caption">Bus Ticket Thermal Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Parking Tickets">
+      <div class="caption">Parking Ticket Thermal Rolls</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Barcode Labels">
+      <div class="caption">Barcode Labels</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Gas Bills">
+      <div class="caption">Gas Bills (HP & Bharat)</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Medical Bills">
+      <div class="caption">Medical Bills</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Restaurant Bills">
+      <div class="caption">Restaurant Bills</div>
+    </div>
+    <div class="slide fade">
+      <img src="images/thermal-billing.jpeg" alt="Jumbo Pre-printed Receipts">
+      <div class="caption">Jumbo Pre-printed Receipts</div>
+    </div>
+  </div>
+<section style="text-align: center; max-width: 850px; margin: 0 auto 40px; padding: 20px;">
+  <p style="font-size: 1.05rem; line-height: 1.7; color: #444;">
+    <strong>WELCOME TO NS ENTERPRISES</strong><br /><br />
+    NS ENTERPRISES is a trusted name in delivering high-quality thermal paper solutions for a wide range of industries. From retail and hospitality to banking and transport, we offer a complete line of products including POS rolls, ATM rolls, barcode labels, billing receipts, and more. Backed by advanced converting facilities and a nationwide distribution network, we ensure prompt delivery and consistent quality. With a focus on innovation and customer satisfaction, NS ENTERPRISES is your one-stop destination for all thermal printing needs.
+  </p>
+
+  <div style="margin-top: 25px;">
+    <a href="products.html" style="
+      background-color: #e76f51;
+      color: white;
+      padding: 12px 28px;
+      border-radius: 30px;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(231, 111, 81, 0.2);
+      transition: background 0.3s ease, transform 0.2s ease;
+      display: inline-block;
+    ">Explore More</a>
+  </div>
+  <section style="background: #fff8fa; padding: 50px 20px; font-family: 'Poppins', sans-serif;">
+  <h2 style="text-align: center; color: #e76f51; margin-bottom: 30px;">Explore Our Offerings</h2>
+
+  <div id="product-slider" style="display: flex; overflow: hidden; max-width: 1100px; margin: auto; gap: 20px;">
+    <!-- Product cards will be injected via JS -->
+  </div>
+
+  <style>
+    .product-card {
+      flex: 1 0 30%;
+      background: #fff;
+      border: 2px solid #000;
+      border-radius: 12px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+      transition: transform 0.3s;
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeInUp 0.6s forwards;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
+      width: 100%;
+      max-height: 150px;
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 15px;
+    }
+
+    .product-card h3 {
+      color: #e76f51;
+      margin-bottom: 10px;
+      font-size: 1.1rem;
+    }
+
+    .product-card ul {
+      text-align: left;
+      padding-left: 20px;
+      margin: 10px 0 15px;
+    }
+
+    .book-now-btn {
+      display: inline-block;
+      background: #e76f51;
+      color: white;
+      padding: 10px 20px;
+      border-radius: 25px;
+      text-decoration: none;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .book-now-btn:hover {
+      background: #cc5c3e;
+    }
+
+    @keyframes fadeInUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
+
+  <script>
+    const products = [
+      {
+        title: "Thermal Billing Rolls",
+        desc: "POS-compatible rolls offering smudge-free prints with clear contrast.",
+        sizes: ["79mm x 50m", "57mm x 15m", "Custom lengths"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Bar Code Thermal Ribbons",
+        desc: "Wax and resin ribbons for barcode printing with sharp visibility.",
+        sizes: ["25mm x 74m", "110mm x 300m", "Wax, Wax-Resin, Resin"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Jumbo Rolls Supply",
+        desc: "Heavy-duty rolls for high-volume printing applications.",
+        sizes: ["250mm width", "560mm width", "Custom lengths available"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "ATM Thermal Paper Rolls",
+        desc: "Reliable and long-lasting rolls ideal for ATM machines.",
+        sizes: ["80mm x 100m", "80mm x 150m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "POS Thermal Paper Rolls",
+        desc: "Designed for high-speed, modern POS billing environments.",
+        sizes: ["57mm x 30m", "79mm x 50m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Cash Register Rolls",
+        desc: "Universal compatibility with cash register brands and models.",
+        sizes: ["44mm x 20m", "57mm x 15m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Fax Thermal Paper Rolls",
+        desc: "Ideal for fax machines, offering clarity and archival-grade output.",
+        sizes: ["216mm x 30m", "216mm x 50m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Toll Plaza Thermal Rolls",
+        desc: "High-speed print capability with clear text for toll booths.",
+        sizes: ["57mm x 30m", "79mm x 40m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Bus Ticket Thermal Rolls",
+        desc: "Rugged ticket rolls made for portable conductor machines.",
+        sizes: ["37mm x 15m", "57mm x 18m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Parking Ticket Thermal Rolls",
+        desc: "Reliable printing for parking receipts and booth operations.",
+        sizes: ["57mm x 30m", "80mm x 50m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Barcode Labels",
+        desc: "Sticky barcode labels for packaging, inventory, and tracking.",
+        sizes: ["50mm x 25mm", "100mm x 150mm"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Gas Bills (HP & Bharat)",
+        desc: "Carbonless, pre-printed bills for HP & Bharat agencies.",
+        sizes: ["A5 size", "A4 size"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Medical Bills",
+        desc: "Custom medical billing sheets for clinics and hospitals.",
+        sizes: ["80mm x 50m", "A5 sheet format"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Restaurant Bills",
+        desc: "POS-ready rolls for smooth restaurant billing operations.",
+        sizes: ["57mm x 40m", "79mm x 50m"],
+        img: "images/thermal-billing.jpeg"
+      },
+      {
+        title: "Jumbo Pre-printed Receipts",
+        desc: "Bulk-use receipts for LIC, healthcare, and education sectors.",
+        sizes: ["250mm width", "Custom length"],
+        img: "images/thermal-billing.jpeg"
+      }
+    ];
+
+    let currentProduct = 0;
+
+    function showProducts() {
+      const container = document.getElementById("product-slider");
+      container.innerHTML = "";
+      for (let i = 0; i < 3; i++) {
+        const index = (currentProduct + i) % products.length;
+        const p = products[index];
+        const sizeList = p.sizes.map(size => `<li>${size}</li>`).join("");
+        container.innerHTML += `
+          <div class="product-card">
+            <img src="${p.img}" alt="${p.title}" />
+            <h3>${p.title}</h3>
+            <p>${p.desc}</p>
+            <strong>Available Sizes:</strong>
+            <ul>${sizeList}</ul>
+            <a href="contact.html" class="book-now-btn">Book Now</a>
+          </div>
+        `;
+      }
+      currentProduct = (currentProduct + 1) % products.length;
+    }
+
+    showProducts();
+    setInterval(showProducts, 8000);
+  </script>
+</section>
+
+<!-- =========================
+     Client Testimonials Section
+     Auto-slide every 8 seconds
+     ========================= -->
+<section style="padding: 50px 20px; background: #fff8fa; font-family: 'Poppins', sans-serif;">
+  <h2 style="text-align: center; color: #e76f51; margin-bottom: 30px;">What Our Clients Say</h2>
+
+  <div id="testimonial-carousel" style="display: flex; overflow: hidden; max-width: 1000px; margin: auto; gap: 20px;">
+    <!-- Testimonials will be injected here -->
+  </div>
+
+  <style>
+    .testimonial-card {
+      flex: 1;
+      min-width: 30%;
+      background: #fff0f6;
+      padding: 20px;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.08);
+      text-align: center;
+      border: 2px solid #000;
+      transition: transform 0.3s;
+    }
+    .testimonial-card:hover {
+      transform: scale(1.02);
+    }
+    .testimonial-card img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      margin-bottom: 12px;
+      border: 2px solid #e76f51;
+      object-fit: cover;
+    }
+    .testimonial-author {
+      font-weight: bold;
+      color: #cc5c3e;
+      margin-top: 8px;
+    }
+  </style>
+
+  <script>
+    const testimonials = [
+      {
+        name: "Ravi Kumar",
+        role: "Retail Store Owner",
+        text: "NS Enterprises provides excellent thermal paper quality. We've been sourcing POS rolls from them for over a year with zero issues. Highly recommended!"
+      },
+      {
+        name: "Sneha Reddy",
+        role: "Logistics Manager",
+        text: "Very professional service and timely delivery. The support team was helpful and responsive. Great for bulk orders too."
+      },
+      {
+        name: "Ajay Mehta",
+        role: "Supermarket Chain",
+        text: "We switched to NS Enterprises for all our billing rolls, and the difference in quality was immediately noticeable. Prints are sharp and paper doesn’t jam."
+      },
+      {
+        name: "Manoj Joshi",
+        role: "Banking Operations",
+        text: "Affordable pricing with premium-grade products. The thermal rolls work flawlessly with our ATM machines. Great vendor!"
+      },
+      {
+        name: "Priya Sharma",
+        role: "Warehouse Manager",
+        text: "Their barcode ribbons are of superior quality. Fast shipping and responsive support make them our go-to supplier."
+      },
+      {
+        name: "Ramesh Kulkarni",
+        role: "Franchise Owner",
+        text: "Excellent customer service and product durability. We use their thermal paper rolls for all our retail outlets."
+      }
+    ];
+
+    let current = 0;
+
+    function showTestimonials() {
+      const container = document.getElementById("testimonial-carousel");
+      container.innerHTML = "";
+
+      for (let i = 0; i < 3; i++) {
+        const index = (current + i) % testimonials.length;
+        const t = testimonials[index];
+        container.innerHTML += `
+          <div class="testimonial-card">
+            <img src="images/profile.png" alt="${t.name}" />
+            <p>"${t.text}"</p>
+            <div class="testimonial-author">${t.name}, ${t.role}</div>
+          </div>
+        `;
+      }
+
+      current = (current + 1) % testimonials.length;
+    }
+
+    showTestimonials();
+    setInterval(showTestimonials, 8000);
+  </script>
+</section>
+
+
+ <!-- =========================
+    contact us section
+     ========================= -->
+</section>
+<section style="background: #fff0f6; padding: 40px 20px; text-align: center; font-family: 'Poppins', sans-serif; color: #5a3e36;">
+  <h2 style="color: #e76f51; margin-bottom: 10px;">Visit NS ENTERPRISES</h2>
+  <p style="font-size: 1rem; max-width: 700px; margin: 0 auto 20px;">
+    We’re located in the heart of Bangalore and welcome you to explore our facility. You can find us here:
+  </p>
+
+  <div style="max-width: 900px; margin: 0 auto; border-radius: 8px; overflow: hidden; box-shadow: 0 4px 12px rgba(231, 111, 81, 0.2);">
+    <iframe
+      src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d31103.65820332815!2d77.52677577598802!3d12.9855098312845!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bae15b3444fce6b%3A0x5696d7a0192f44a5!2sDasanapura%20Hobli%2C%20Bangalore!5e0!3m2!1sen!2sin!4v1687321234567!5m2!1sen!2sin"
+      width="100%"
+      height="350"
+      style="border:0;"
+      allowfullscreen=""
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade">
+    </iframe>
+  </div>
+
+  <p style="margin: 20px 0 10px; font-weight: bold;">
+    📍 Factory No. 43, SY No. 7/2, Kachohalli Village,<br>Dasanapura Hobli, Bangalore – 560091
+  </p>
+
+  <a href="https://www.google.com/maps/dir/?api=1&destination=Dasanapura+Hobli,+Bangalore" target="_blank" style="
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #e76f51;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s;
+  ">Get Directions</a>
+</section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 NS ENTERPRISES. All rights reserved.</p>
+    <p>📍 Factory No. 43, SY No. 7/2, Kachohalli Village, Dasanapura Hobli, Bangalore – 560091</p>
+    <p>📞 +91 98804 08606 | ✉️ <a href="mailto:nsenterprisesnagavenihh@gmail.com">nsenterprisesnagavenihh@gmail.com</a></p>
+    <div style="margin-top: 10px;">
+      <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;"><i class="fab fa-instagram"></i></a>
+      <a href="#" target="_blank" style="margin: 0 10px; color: #ff6f91; font-size: 1.3rem;"><i class="fab fa-linkedin-in"></i></a>
+    </div>
+  </footer>
+
+  <!-- JavaScript for auto slideshow -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+
+    function showSlides() {
+      const slides = document.getElementsByClassName("slide");
+      for (let i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1; }
+      slides[slideIndex - 1].style.display = "block";
+      setTimeout(showSlides, 2000);
+    }
+  </script>
 </body>
 </html>
