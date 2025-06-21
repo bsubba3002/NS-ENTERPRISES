@@ -2,10 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Our Products | NS ENTERPRISES</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
   <style>
     body {
       font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
@@ -27,20 +26,22 @@
       margin-bottom: 10px;
     }
 
-    header a {
-      display: inline-block;
-      margin-top: 15px;
-      background-color: white;
-      color: #ff6f91;
-      padding: 10px 20px;
-      border-radius: 25px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s;
+    nav {
+      background-color: #ffe3ec;
+      text-align: center;
+      padding: 10px 0;
     }
 
-    header a:hover {
-      background-color: #ffe3ec;
+    nav a {
+      color: #ff6f91;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+      font-size: 1.1rem;
+    }
+
+    nav a:hover {
+      color: #ff8c42;
     }
 
     section h2 {
@@ -52,7 +53,7 @@
 
     .product-grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
       gap: 25px;
       padding: 0 25px 50px;
       max-width: 1200px;
@@ -67,7 +68,7 @@
       opacity: 0;
       transform: translateY(30px);
       animation: fadeSlideUp 0.6s forwards;
-      animation-delay: var(--delay);
+      animation-delay: var(--delay, 0s);
       transition: box-shadow 0.3s ease;
     }
 
@@ -95,6 +96,30 @@
       line-height: 1.4;
     }
 
+    .product-card ul {
+      text-align: left;
+      padding-left: 20px;
+      margin-top: 10px;
+    }
+
+    .book-now-btn {
+      display: inline-block;
+      margin-top: 15px;
+      background-color: #ff6f91;
+      color: white;
+      padding: 10px 16px;
+      border: none;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .book-now-btn:hover {
+      background-color: #ff8c42;
+      transform: scale(1.05);
+    }
+
     @keyframes fadeSlideUp {
       to {
         opacity: 1;
@@ -109,119 +134,309 @@
       padding: 20px;
       font-size: 0.9rem;
     }
+    .site-header {
+  position: fixed;
+  top: 0; left: 0; right: 0;
+  background: rgba(255, 182, 193, 0.25); /* light pink transparent */
+  backdrop-filter: blur(12px);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 30px;
+  box-shadow: 0 2px 5px rgba(231, 111, 81, 0.3);
+  z-index: 1000;
+}
+
+.site-header h1 {
+  margin: 0;
+  font-size: 1.7rem;
+  font-weight: 700;
+  color: #e76f51;
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.site-header nav a {
+  color: #e76f51;
+  font-weight: 600;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: color 0.3s ease, transform 0.2s ease;
+}
+
+.site-header nav a:hover {
+  color: #cc5c3e;
+  transform: scale(1.05);
+}
+
+@media (max-width: 600px) {
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    padding: 20px;
+  }
+  .site-header nav {
+    flex-direction: column;
+    gap: 12px;
+  }
+}
+
   </style>
 </head>
+
+
+    
+
+
+<header class="site-header">
+  <h1>NS ENTERPRISES</h1>
+  <nav>
+    <a href="index.html">Home</a>
+    <a href="products.html">Product</a>
+    <a href="about.html">About Us</a>
+    <a href="testimonials.html">Testimonials</a>
+    <a href="contact.html">Contact Us</a>
+  </nav>
+</header>
+    <br>    <br>
+
+
 <body>
+  <section>
+    <h2>Explore Our Offerings</h2>
+    <div class="product-grid">
 
-    <h1>NS ENTERPRISES</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="products.html">Product</a>
-      <a href="about.html">About Us</a>
-      <a href="testimonials.html">Testimonials</a>
-      <a href="contact.html">Contact Us</a>
-    </nav>
-  </header>
+      <!-- Product 1 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Thermal Billing Rolls" />
+        <h3>Thermal Billing Rolls</h3>
+        <p>POS-compatible rolls offering smudge-free prints with clear contrast.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>79mm x 50m</li>
+          <li>57mm x 15m</li>
+          <li>Custom lengths</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
 
-  <main>
-    <h2>Contact Us</h2>
+      <!-- Product 2 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Bar Code Thermal Ribbons" />
+        <h3>Bar Code Thermal Ribbons</h3>
+        <p>Wax and resin ribbons for barcode printing with sharp visibility.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>25mm x 74m</li>
+          <li>110mm x 300m</li>
+          <li>Wax, Wax-Resin, Resin</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
 
+      <!-- Product 3 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Jumbo Rolls" />
+        <h3>Jumbo Rolls Supply</h3>
+        <p>Heavy-duty rolls for high-volume printing applications.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>250mm width</li>
+          <li>560mm width</li>
+          <li>Custom lengths available</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
 
-<section>
-  <h2>Explore Our Offerings</h2>
-  <div class="product-grid">
+      <!-- Product 4 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="ATM Rolls" />
+        <h3>ATM Thermal Paper Rolls</h3>
+        <p>Reliable and long-lasting rolls ideal for ATM machines.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>80mm x 100m</li>
+          <li>80mm x 150m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
 
-    <div class="product-card" style="--delay: 0s;">
-      <img src="images/thermal-billing.jpg" alt="Thermal Billing Rolls" />
-      <h3>Thermal Billing Rolls</h3>
-      <p>High-quality thermal rolls for POS and billing systems with clear, smudge-free prints.</p>
+      <!-- Product 5 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="POS Rolls" />
+        <h3>POS Thermal Paper Rolls</h3>
+        <p>Designed for high-speed, modern POS billing environments.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>57mm x 30m</li>
+          <li>79mm x 50m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 6 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Cash Register Rolls" />
+        <h3>Cash Register Rolls</h3>
+        <p>Universal compatibility with cash register brands and models.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>44mm x 20m</li>
+          <li>57mm x 15m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 7 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Fax Rolls" />
+        <h3>Fax Thermal Paper Rolls</h3>
+        <p>Ideal for fax machines, offering clarity and archival-grade output.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>216mm x 30m</li>
+          <li>216mm x 50m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 8 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Toll Rolls" />
+        <h3>Toll Plaza Thermal Rolls</h3>
+        <p>High-speed print capability with clear text for toll booths.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>57mm x 30m</li>
+          <li>79mm x 40m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 9 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Bus Ticket Rolls" />
+        <h3>Bus Ticket Thermal Rolls</h3>
+        <p>Rugged ticket rolls made for portable conductor machines.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>37mm x 15m</li>
+          <li>57mm x 18m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 10 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Parking Tickets" />
+        <h3>Parking Ticket Thermal Rolls</h3>
+        <p>Reliable printing for parking receipts and booth operations.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>57mm x 30m</li>
+          <li>80mm x 50m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 11 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Barcode Labels" />
+        <h3>Barcode Labels</h3>
+        <p>Sticky barcode labels for packaging, inventory, and tracking.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>50mm x 25mm</li>
+          <li>100mm x 150mm</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 12 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Gas Bills" />
+        <h3>Gas Bills (HP & Bharat)</h3>
+        <p>Carbonless, pre-printed bills for HP & Bharat agencies.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>A5 size</li>
+          <li>A4 size</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 13 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Medical Bills" />
+        <h3>Medical Bills</h3>
+        <p>Custom medical billing sheets for clinics and hospitals.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>80mm x 50m</li>
+          <li>A5 sheet format</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 14 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Restaurant Bills" />
+        <h3>Restaurant Bills</h3>
+        <p>POS-ready rolls for smooth restaurant billing operations.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>57mm x 40m</li>
+          <li>79mm x 50m</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
+      <!-- Product 15 -->
+      <div class="product-card">
+        <img src="images/thermal-billing.jpeg" alt="Jumbo Pre-printed Receipts" />
+        <h3>Jumbo Pre-printed Receipts</h3>
+        <p>Bulk-use receipts for LIC, healthcare, and education sectors.</p>
+        <strong>Available Sizes:</strong>
+        <ul>
+          <li>250mm width</li>
+          <li>Custom length</li>
+        </ul>
+        <a href="contact.html" class="book-now-btn">Book Now</a>
+      </div>
+
     </div>
+  </section>
+</body>
+</html>
 
-    <div class="product-card" style="--delay: 0.15s;">
-      <img src="images/barcode-ribbons.jpg" alt="Bar Code Thermal Ribbons" />
-      <h3>Bar Code Thermal Ribbons</h3>
-      <p>Durable ribbons suitable for all barcode printing applications, ensuring high contrast.</p>
-    </div>
+<style>
+  .book-now-btn {
+    display: inline-block;
+    margin-top: 10px;
+    background-color: #007BFF;
+    color: #fff;
+    padding: 8px 14px;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+  }
 
-    <div class="product-card" style="--delay: 0.3s;">
-      <img src="images/jumbo-rolls.jpg" alt="Jumbo Rolls" />
-      <h3>Jumbo Rolls Supply</h3>
-      <p>Bulk thermal paper rolls for heavy printing needs. Available in various lengths.</p>
-    </div>
+  .book-now-btn:hover {
+    background-color: #0056b3;
+  }
 
-    <div class="product-card" style="--delay: 0.45s;">
-      <img src="images/atm-rolls.jpg" alt="ATM Rolls" />
-      <h3>ATM Thermal Paper Rolls</h3>
-      <p>Reliable thermal rolls for ATM receipts, with consistent performance and longevity.</p>
-    </div>
+  ul {
+    margin: 5px 0 10px 0;
+    padding-left: 20px;
+  }
+</style>
 
-    <div class="product-card" style="--delay: 0.6s;">
-      <img src="images/pos-rolls.jpg" alt="POS Rolls" />
-      <h3>POS Thermal Paper Rolls</h3>
-      <p>Premium rolls designed for modern POS systems. Crisp print and long-lasting.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 0.75s;">
-      <img src="images/cash-register.jpg" alt="Cash Register Rolls" />
-      <h3>Cash Register Rolls</h3>
-      <p>Compatible with various cash registers, delivering high-quality receipts.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 0.9s;">
-      <img src="images/fax-paper.jpg" alt="Fax Rolls" />
-      <h3>Fax Thermal Paper Rolls</h3>
-      <p>Thermal rolls optimized for fax machines. Clear prints and archival quality.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.05s;">
-      <img src="images/toll-plaza.jpg" alt="Toll Rolls" />
-      <h3>Toll Plaza Thermal Rolls</h3>
-      <p>Fast-printing rolls for toll booths, ensuring smooth toll operations.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.2s;">
-      <img src="images/bus-ticket.jpg" alt="Bus Ticket Rolls" />
-      <h3>Bus Ticket Thermal Rolls</h3>
-      <p>Durable ticket rolls used widely in bus conductors’ devices.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.35s;">
-      <img src="images/parking-ticket.jpg" alt="Parking Tickets" />
-      <h3>Parking Ticket Thermal Rolls</h3>
-      <p>Efficient printing rolls for parking meters and booths.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.5s;">
-      <img src="images/barcode-labels.jpg" alt="Barcode Labels" />
-      <h3>Barcode Labels</h3>
-      <p>Adhesive barcode labels in various sizes, perfect for packaging and tracking.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.65s;">
-      <img src="images/gas-bills.jpg" alt="Gas Bills" />
-      <h3>Gas Bills (HP & Bharat)</h3>
-      <p>Pre-printed gas bills for HP and Bharat with high-quality carbonless paper.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.8s;">
-      <img src="images/medical-bills.jpg" alt="Medical Bills" />
-      <h3>Medical Bills</h3>
-      <p>Secure and customizable thermal printouts for hospitals and clinics.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 1.95s;">
-      <img src="images/restaurant-bills.jpg" alt="Restaurant Bills" />
-      <h3>Restaurant Bills</h3>
-      <p>Thermal receipt paper for fast-paced restaurant POS billing systems.</p>
-    </div>
-
-    <div class="product-card" style="--delay: 2.1s;">
-      <img src="images/preprinted-receipts.jpg" alt="Jumbo Pre-printed Receipts" />
-      <h3>Jumbo Pre-printed Receipts</h3>
-      <p>Ideal for LIC, medical and educational institutions with bulk usage needs.</p>
-    </div>
-
-  </div>
 </section>
 <style>footer {
   text-align: center;
